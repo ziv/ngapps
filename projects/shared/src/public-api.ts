@@ -1,1 +1,1 @@
-export * from './components/color-scheme';
+export default {};

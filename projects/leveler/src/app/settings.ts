@@ -5,7 +5,7 @@ import {MatButton} from '@angular/material/button';
 import {MatDialogClose, MatDialogContent} from '@angular/material/dialog';
 import {Service} from './service';
 import {MatSlideToggle} from '@angular/material/slide-toggle';
-import {ColorScheme} from '@shared';
+import {ColorScheme} from '@shared/components';
 
 @Component({
   selector: 'app-settings',
@@ -45,7 +45,7 @@ import {ColorScheme} from '@shared';
         </mat-card>
         <mat-card>
           <mat-card-content>
-              <na-color-scheme>Color scheme</na-color-scheme>
+            <na-color-scheme>Color scheme</na-color-scheme>
           </mat-card-content>
         </mat-card>
         <button matButton="tonal" mat-dialog-close>Close</button>

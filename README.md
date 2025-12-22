@@ -21,3 +21,16 @@ Tiny progressive web applications built with Angular.
    ng add @angular/material --project=my-app
    ng add @angular/pwa --project=my-app
    ```
+
+### Shared Items
+
+#### Components
+
+##### Color Scheme
+
+A component that allows users to switch between device, light and dark themes.
+
+```angular20html
+
+<na-color-scheme/>
+```
