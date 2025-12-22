@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1766403081487,
+  "timestamp": 1766422113540,
   "index": "/ngapps/leveler/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "/ngapps/leveler/index.html",
         "/ngapps/leveler/main-R67Z5WT7.js",
         "/ngapps/leveler/manifest.webmanifest",
-        "/ngapps/leveler/styles-U6BRHINJ.css"
+        "/ngapps/leveler/styles-5HBOUHH6.css"
       ],
       "patterns": []
     },
@@ -50,10 +50,10 @@
     "/ngapps/leveler/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/ngapps/leveler/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/ngapps/leveler/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/ngapps/leveler/index.html": "218b09f88418cb555db95f7f58494b16730c5028",
+    "/ngapps/leveler/index.html": "eeb22fd6282aa7810e42a4f5683643b8b3e7de35",
     "/ngapps/leveler/main-R67Z5WT7.js": "30c58ab40037912aefdd0d82849f71cbf3f7c12b",
     "/ngapps/leveler/manifest.webmanifest": "9690ac1bc5941b42dd9cff0add744c42a400f0d8",
-    "/ngapps/leveler/styles-U6BRHINJ.css": "ce42ab46d90e8005f0f4e5be99d851b9c4522bb0"
+    "/ngapps/leveler/styles-5HBOUHH6.css": "08270a925990d7270bcf003fe96d23bc63345c41"
   },
   "navigationUrls": [
     {
