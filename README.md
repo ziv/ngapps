@@ -1,3 +1,3 @@
-# ktantanim
+# Tiny Angular Applications
 
 Soon.
