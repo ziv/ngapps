@@ -25,6 +25,10 @@ import {Field, form} from '@angular/forms/signals';
             <section class="flex flex-col gap-4">
               <mat-slide-toggle [field]="frm.showOuterCircle">Show outer circle</mat-slide-toggle>
               <mat-slide-toggle [field]="frm.showInnerCircle">Show inner circle</mat-slide-toggle>
+              <mat-slide-toggle [field]="frm.showCompassDirections">Show directions</mat-slide-toggle>
+              <mat-slide-toggle [field]="frm.showDegreeMarkers">Show markers</mat-slide-toggle>
+              <mat-slide-toggle [field]="frm.showNorthIndicator">Show north indicator</mat-slide-toggle>
+              <mat-slide-toggle [field]="frm.showSouthIndicator">Show south indicator</mat-slide-toggle>
             </section>
           </mat-card-content>
         </mat-card>

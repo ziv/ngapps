@@ -9,22 +9,28 @@ export class Service {
     showInnerCircle: true,
     showCompassDirections: true,
     showDegreeMarkers: true,
-    showDebugInfo: false,
+    showNorthIndicator: true,
+    showSouthIndicator: true,
   });
 
   constructor() {
-    window.addEventListener('deviceorientation', this.handleOrientation.bind(this));
+    window.addEventListener(
+      'deviceorientation',
+      this.handleOrientation.bind(this),
+    );
   }
 
+  /**
+   * Converts device orientation event data to a compass heading.
+   * @param event
+   * @private
+   */
   private handleOrientation(event: DeviceOrientationEvent) {
     if (event.alpha === null || event.beta === null || event.gamma === null) {
       return;
     }
     let compass = -(event.alpha + event.beta * event.gamma / 90);
-    compass -= Math.floor(compass / 360) * 360;
-    let heading = 360 - event.alpha;
-    // Normalize to 0-360
-    heading = ((heading % 360) + 360) % 360;
+    compass -= Math.floor(compass / 360) * 360 + 180;
     this.heading.set(Math.round(compass));
   }
 }
