@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1766422116388,
+  "timestamp": 1766436879502,
   "index": "/ngapps/compass/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "/ngapps/compass/index.html",
         "/ngapps/compass/main-2AJQXOVI.js",
         "/ngapps/compass/manifest.webmanifest",
-        "/ngapps/compass/styles-AUIIVPXG.css"
+        "/ngapps/compass/styles-GM7WLT6E.css"
       ],
       "patterns": []
     },
@@ -50,10 +50,10 @@
     "/ngapps/compass/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/ngapps/compass/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/ngapps/compass/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/ngapps/compass/index.html": "059ceba29c7ee28e3b764bb94ce3bc7460503783",
+    "/ngapps/compass/index.html": "7b6c8ddc5c2b8a732984cfaefad42348ed369c71",
     "/ngapps/compass/main-2AJQXOVI.js": "25cd2f45061949be4cea9f49a8e2f5895bc53c1d",
     "/ngapps/compass/manifest.webmanifest": "7e1f05be722d55c23bfb31d42bcd3280a1ae7547",
-    "/ngapps/compass/styles-AUIIVPXG.css": "b6ab52ec353e610ec239f6a887e9361186e72497"
+    "/ngapps/compass/styles-GM7WLT6E.css": "b05edae5e8ddf52dd011ab2f8ec16fbf0eb1dacb"
   },
   "navigationUrls": [
     {

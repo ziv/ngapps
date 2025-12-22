@@ -196,6 +196,8 @@
               }
             ],
             "styles": [
+              "projects/shared/styles/reset.css",
+              "projects/shared/styles/layout.css",
               "projects/playground/src/styles.css"
             ]
           },
@@ -231,6 +233,74 @@
             },
             "development": {
               "buildTarget": "playground:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        }
+      }
+    },
+    "barcoder": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "inlineStyle": true
+        }
+      },
+      "root": "projects/barcoder",
+      "sourceRoot": "projects/barcoder/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/barcoder/src/main.ts",
+            "tsConfig": "projects/barcoder/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/barcoder/public"
+              }
+            ],
+            "styles": [
+              "projects/barcoder/src/styles.css"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "barcoder:build:production"
+            },
+            "development": {
+              "buildTarget": "barcoder:build:development"
             }
           },
           "defaultConfiguration": "development"

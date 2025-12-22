@@ -1,0 +1,24 @@
+.col, .row {
+  display: flex;
+}
+
+.box {
+  display: block;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.g-10 {
+  gap: 1em;
+}
