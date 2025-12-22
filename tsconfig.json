@@ -57,6 +57,12 @@
     },
     {
       "path": "./projects/sensors/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/compass/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/compass/tsconfig.spec.json"
     }
   ]
 }
