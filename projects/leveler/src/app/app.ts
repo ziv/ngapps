@@ -1,23 +1,21 @@
 import {Component, inject} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import Settings from './settings';
+import {Settings} from './settings';
 import {Service} from './service';
+import {LevelerDebug} from './debug';
 
 @Component({
   selector: 'app-root',
   host: {
-    '(dblclick)': 'openMenu()',
+    '(dblclick)': 'settings()',
     class: 'block w-full h-full',
   },
+  imports: [
+    LevelerDebug,
+  ],
   template: `
     @if (service.settings().showDebugInfo) {
-      <pre class="absolute top-1 left-1">
-α = {{service.orientation().alpha}}
-β = {{service.orientation().beta}}
-γ = {{service.orientation().gamma}}
-Vertical Offset = {{service.settings().verticalOffset}}
-Horizontal Offset = {{service.settings().horizontalOffset}}
-      </pre>
+      <app-debug/>
     }
     <svg width="100%" height="100%">
       <line x1="0"
@@ -56,11 +54,7 @@ export class App {
   protected readonly dialog = inject(MatDialog);
   protected readonly service = inject(Service);
 
-  constructor() {
-    // document.documentElement.style.setProperty('color-scheme', 'normal');
-  }
-
-  openMenu() {
+  settings() {
     this.dialog.open(Settings);
   }
 }

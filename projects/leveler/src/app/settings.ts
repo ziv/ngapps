@@ -1,11 +1,11 @@
 import {Component, inject} from '@angular/core';
 import {Field, form} from '@angular/forms/signals';
 import {MatCard, MatCardActions, MatCardContent} from '@angular/material/card';
-import {MatButton, MatIconButton} from '@angular/material/button';
+import {MatButton} from '@angular/material/button';
 import {MatDialogClose, MatDialogContent} from '@angular/material/dialog';
 import {Service} from './service';
 import {MatSlideToggle} from '@angular/material/slide-toggle';
-import {MatIcon} from '@angular/material/icon';
+import {ColorScheme} from '@shared';
 
 @Component({
   selector: 'app-settings',
@@ -19,8 +19,7 @@ import {MatIcon} from '@angular/material/icon';
     MatDialogContent,
     MatSlideToggle,
     MatDialogClose,
-    MatIcon,
-    MatIconButton
+    ColorScheme
   ],
   template: `
     <mat-dialog-content>
@@ -46,19 +45,8 @@ import {MatIcon} from '@angular/material/icon';
         </mat-card>
         <mat-card>
           <mat-card-content>
-            <p>Color scheme</p>
+              <na-color-scheme>Color scheme</na-color-scheme>
           </mat-card-content>
-          <mat-card-actions>
-            <button matIconButton (click)="setScheme('normal')">
-              <mat-icon>computer</mat-icon>
-            </button>
-            <button matIconButton (click)="setScheme('dark')">
-              <mat-icon>dark_mode</mat-icon>
-            </button>
-            <button matIconButton (click)="setScheme('light')">
-              <mat-icon>light_mode</mat-icon>
-            </button>
-          </mat-card-actions>
         </mat-card>
         <button matButton="tonal" mat-dialog-close>Close</button>
       </section>
@@ -68,10 +56,4 @@ import {MatIcon} from '@angular/material/icon';
 export class Settings {
   protected readonly service = inject(Service);
   protected readonly frm = form(this.service.settings);
-
-  setScheme(scheme: 'dark' | 'light' | 'normal') {
-    document.documentElement.style.setProperty('color-scheme', scheme);
-  }
 }
-
-export default Settings;

@@ -66,8 +66,20 @@ export class Service {
    * Since the app does not have routes, there is no need to unregister them.
    */
   constructor() {
-    window.addEventListener('deviceorientation', this.handleOrientation.bind(this));
-    window.addEventListener('resize', this.updateDimensions.bind(this));
+    window.addEventListener('deviceorientation', (e: DeviceOrientationEvent) => {
+      this.orientation.set({
+        alpha: e.alpha ?? 0,
+        beta: e.beta ?? 0,
+        gamma: e.gamma ?? 0,
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      this.dimensions.set({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    });
   }
 
   /**
@@ -82,6 +94,9 @@ export class Service {
     this.snack.open('Calibrated', undefined, {duration: 2000});
   }
 
+  /**
+   * Reset calibration offsets to zero.
+   */
   resetCalibration() {
     this.settings.set({
       ...this.settings(),
@@ -89,20 +104,5 @@ export class Service {
       horizontalOffset: 0,
     });
     this.snack.open('Calibration reset', undefined, {duration: 2000});
-  }
-
-  private updateDimensions() {
-    this.dimensions.set({
-      width: window.innerWidth,
-      height: window.innerHeight
-    });
-  }
-
-  private handleOrientation(e: DeviceOrientationEvent) {
-    this.orientation.set({
-      alpha: e.alpha ?? 0,
-      beta: e.beta ?? 0,
-      gamma: e.gamma ?? 0,
-    });
   }
 }
