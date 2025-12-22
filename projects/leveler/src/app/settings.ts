@@ -49,10 +49,13 @@ import {MatIcon} from '@angular/material/icon';
             <p>Color scheme</p>
           </mat-card-content>
           <mat-card-actions>
-            <button matIconButton>
+            <button matIconButton (click)="setScheme('normal')">
+              <mat-icon>computer</mat-icon>
+            </button>
+            <button matIconButton (click)="setScheme('dark')">
               <mat-icon>dark_mode</mat-icon>
             </button>
-            <button matIconButton>
+            <button matIconButton (click)="setScheme('light')">
               <mat-icon>light_mode</mat-icon>
             </button>
           </mat-card-actions>
@@ -65,6 +68,10 @@ import {MatIcon} from '@angular/material/icon';
 export class Settings {
   protected readonly service = inject(Service);
   protected readonly frm = form(this.service.settings);
+
+  setScheme(scheme: 'dark' | 'light' | 'normal') {
+    document.documentElement.style.setProperty('color-scheme', scheme);
+  }
 }
 
 export default Settings;
