@@ -1,15 +1,8 @@
 # Tiny Angular Applications
 
-Soon.
+Tiny progressive web applications built with Angular.
 
 | Application                                      | Description                |
 |--------------------------------------------------|----------------------------|
 | [Leveler](https://ziv.github.io/ngapps/leveler/) | Leveler for mobile devices |
 
-### Build Commands
-
-#### Leveler
-
-```shell
-ng build leveler --base-href=/ngapps/leveler/
-```
