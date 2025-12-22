@@ -2,10 +2,11 @@
 
 Tiny progressive web applications built with Angular.
 
-| Application                                      | Description                |
-|--------------------------------------------------|----------------------------|
-| [Leveler](https://ziv.github.io/ngapps/leveler/) | Leveler for mobile devices |
-| [Compass](https://ziv.github.io/ngapps/compass/) | Compass for mobile devices |
+| Application                                        | Description                       |
+|----------------------------------------------------|-----------------------------------|
+| [Leveler](https://ziv.github.io/ngapps/leveler/)   | Leveler for mobile devices        |
+| [Compass](https://ziv.github.io/ngapps/compass/)   | Compass for mobile devices        |
+| [Barcoder](https://ziv.github.io/ngapps/barcoder/) | Barcode reader for mobile devices |
 
 ## Development
 
