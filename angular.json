@@ -36,6 +36,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/ngapps/leveler/",
               "budgets": [
                 {
                   "type": "initial",
@@ -106,6 +107,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/ngapps/compass/",
               "budgets": [
                 {
                   "type": "initial",
@@ -266,11 +268,13 @@
               }
             ],
             "styles": [
+              "projects/barcoder/src/material-theme.scss",
               "projects/barcoder/src/styles.css"
             ]
           },
           "configurations": {
             "production": {
+              "baseHref": "/ngapps/barcoder/",
               "budgets": [
                 {
                   "type": "initial",
@@ -301,6 +305,74 @@
             },
             "development": {
               "buildTarget": "barcoder:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        }
+      }
+    },
+    "dice": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "inlineStyle": true
+        }
+      },
+      "root": "projects/dice",
+      "sourceRoot": "projects/dice/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/dice/src/main.ts",
+            "tsConfig": "projects/dice/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/dice/public"
+              }
+            ],
+            "styles": [
+              "projects/dice/src/styles.css"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "dice:build:production"
+            },
+            "development": {
+              "buildTarget": "dice:build:development"
             }
           },
           "defaultConfiguration": "development"

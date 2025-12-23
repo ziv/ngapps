@@ -63,6 +63,12 @@
     },
     {
       "path": "./projects/barcoder/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/dice/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/dice/tsconfig.spec.json"
     }
   ]
 }

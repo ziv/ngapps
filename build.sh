@@ -1,11 +1,11 @@
-ng build leveler --base-href=/ngapps/leveler/
-rm -rf docs/leveler
+rm -rf docs
+mkdir docs
+
+ng build leveler
 cp -r dist/leveler/browser docs/leveler
 
-ng build compass --base-href=/ngapps/compass/
-rm -rf docs/compass
+ng build compass
 cp -r dist/compass/browser docs/compass
 
-ng build barcoder --base-href=/ngapps/barcoder/
-rm -rf docs/barcoder
+ng build barcoder
 cp -r dist/barcoder/browser docs/barcoder

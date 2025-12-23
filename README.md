@@ -1,12 +1,13 @@
 # Tiny Angular Applications
 
-Tiny progressive web applications built with Angular.
+Tiny minimalist progressive web applications built with Angular.
+An educational project for Angular and Web API.
 
-| Application                                        | Description                       |
-|----------------------------------------------------|-----------------------------------|
-| [Leveler](https://ziv.github.io/ngapps/leveler/)   | Leveler for mobile devices        |
-| [Compass](https://ziv.github.io/ngapps/compass/)   | Compass for mobile devices        |
-| [Barcoder](https://ziv.github.io/ngapps/barcoder/) | Barcode reader for mobile devices |
+| Application                                        | Description                              |
+|----------------------------------------------------|------------------------------------------|
+| [Leveler](https://ziv.github.io/ngapps/leveler/)   | Leveler for mobile devices               |
+| [Compass](https://ziv.github.io/ngapps/compass/)   | Compass for mobile devices               |
+| [Barcoder](https://ziv.github.io/ngapps/barcoder/) | Simple barcode reader for mobile devices |
 
 ## Development
 
