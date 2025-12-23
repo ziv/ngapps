@@ -1,13 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component, signal} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {PlusMinus} from '@shared/components';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, PlusMinus],
   template: `
     <h1>Welcome to {{ title() }}!</h1>
-
-    <router-outlet />
+    <na-plus-minus/>
+    <router-outlet/>
   `,
   styles: [],
 })

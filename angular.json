@@ -338,6 +338,7 @@
               }
             ],
             "styles": [
+              "projects/dice/src/material-theme.scss",
               "projects/dice/src/styles.css"
             ]
           },
