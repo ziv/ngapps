@@ -1,7 +1,7 @@
 # Tiny Angular Applications
 
 Tiny minimalist progressive web applications built with Angular.
-An educational project for Angular and Web API.
+An educational project for **Angular** and **Web API**.
 
 | Application                                        | Description                              |
 |----------------------------------------------------|------------------------------------------|
