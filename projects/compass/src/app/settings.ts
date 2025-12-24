@@ -4,6 +4,7 @@ import {MatDialogContent} from '@angular/material/dialog';
 import {MatCard, MatCardContent} from '@angular/material/card';
 import {MatSlideToggle} from '@angular/material/slide-toggle';
 import {Field, form} from '@angular/forms/signals';
+import {ColorScheme} from '@shared/components';
 
 @Component({
   selector: 'app-settings',
@@ -12,7 +13,8 @@ import {Field, form} from '@angular/forms/signals';
     MatCard,
     MatCardContent,
     MatSlideToggle,
-    Field
+    Field,
+    ColorScheme
   ],
   host: {
     class: 'h-full w-full flex flex-row'
@@ -29,6 +31,7 @@ import {Field, form} from '@angular/forms/signals';
               <mat-slide-toggle [field]="frm.showDegreeMarkers">Show markers</mat-slide-toggle>
               <mat-slide-toggle [field]="frm.showNorthIndicator">Show north indicator</mat-slide-toggle>
               <mat-slide-toggle [field]="frm.showSouthIndicator">Show south indicator</mat-slide-toggle>
+              <na-color-scheme />
             </section>
           </mat-card-content>
         </mat-card>
