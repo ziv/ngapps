@@ -13,7 +13,7 @@ export type Orientation = {
 };
 
 export type Mode =
-  'unknown'
+  | 'unknown'
   | 'portrait'
   | 'portraitUpsideDown'
   | 'landscapeLeft'
