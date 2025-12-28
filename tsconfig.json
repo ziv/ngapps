@@ -69,6 +69,12 @@
     },
     {
       "path": "./projects/dice/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/leveler-advanced/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/leveler-advanced/tsconfig.spec.json"
     }
   ]
 }

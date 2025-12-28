@@ -6,10 +6,11 @@ import {MatDialogClose, MatDialogContent} from '@angular/material/dialog';
 import {Service} from './service';
 import {MatSlideToggle} from '@angular/material/slide-toggle';
 import {ColorScheme} from '@shared/components';
+import {MatChip} from '@angular/material/chips';
+import {DecimalPipe} from '@angular/common';
 
 @Component({
   selector: 'app-settings',
-  styles: ``,
   imports: [
     Field,
     MatCard,
@@ -19,24 +20,35 @@ import {ColorScheme} from '@shared/components';
     MatDialogContent,
     MatSlideToggle,
     MatDialogClose,
-    ColorScheme
+    ColorScheme,
+    MatChip,
+    DecimalPipe
   ],
   template: `
     <mat-dialog-content>
-      <section class="flex flex-col gap-4">
+      <section class="col g-10">
         <mat-card>
           <mat-card-content>
-            <p>Calibration, set the device current orientation to (0,0).</p>
-            <p>Reset to remove the calibration settings.</p>
+            <section class="row center between">
+              <span>Offset</span>
+              <mat-chip>
+                {{ service.settings().verticalOffset | number:'1.2-2' }},
+                {{ service.settings().horizontalOffset | number:'1.2-2' }}
+              </mat-chip>
+            </section>
           </mat-card-content>
-          <mat-card-actions class="gap-2">
+          <mat-card-actions class="between g-10">
+            <p>Set the device current orientation as origin</p>
             <button matButton="filled" (click)="service.calibrate()">Calibrate</button>
+          </mat-card-actions>
+          <mat-card-actions class="between g-10">
+            <p>Reset to remove the calibration settings</p>
             <button matButton="tonal" (click)="service.resetCalibration()">Reset</button>
           </mat-card-actions>
         </mat-card>
         <mat-card>
           <mat-card-content>
-            <section class="flex flex-col gap-4">
+            <section class="col g-10">
               <mat-slide-toggle [field]="frm.showVerticalLine">Show vertical leveler</mat-slide-toggle>
               <mat-slide-toggle [field]="frm.showHorizontalLine">Show horizontal leveler</mat-slide-toggle>
               <mat-slide-toggle [field]="frm.showDebugInfo">Show Debug Info</mat-slide-toggle>

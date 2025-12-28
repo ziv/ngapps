@@ -3,20 +3,37 @@ import {MatDialog} from '@angular/material/dialog';
 import {Settings} from './settings';
 import {Service} from './service';
 import {LevelerDebug} from './debug';
+import {MatMiniFabButton} from '@angular/material/button';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
   host: {
     '(dblclick)': 'settings()',
-    class: 'block w-full h-full',
+    class: 'box f-w f-h',
   },
   imports: [
     LevelerDebug,
+    MatMiniFabButton,
+    MatIcon,
   ],
+  styles: `
+    .fab-button {
+      position: absolute;
+      bottom: 1em;
+      right: 1em;
+      z-index: 999;
+    }
+  `,
   template: `
     @if (service.settings().showDebugInfo) {
       <app-debug/>
     }
+    <button matMiniFab
+            class="fab-button"
+            (click)="settings()">
+      <mat-icon>settings</mat-icon>
+    </button>
     <svg width="100%" height="100%">
       <line x1="0"
             [attr.y1]="service.vmark()"

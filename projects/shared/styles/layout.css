@@ -1,9 +1,23 @@
-.col, .row {
-  display: flex;
+/* layout */
+
+.f-w {
+  width: 100%;
 }
+
+.f-h {
+  height: 100%;
+}
+
+/* block */
 
 .box {
   display: block;
+}
+
+/* flex */
+
+.col, .row {
+  display: flex;
 }
 
 .col {
@@ -15,8 +29,11 @@
 }
 
 .center {
-  justify-content: center;
   align-items: center;
+}
+
+.between {
+  justify-content: space-between;
 }
 
 .g-10 {

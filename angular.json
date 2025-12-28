@@ -31,6 +31,7 @@
             ],
             "styles": [
               "projects/leveler/src/custom-theme.scss",
+              "projects/shared/styles/layout.css",
               "projects/leveler/src/styles.css"
             ]
           },
@@ -374,6 +375,74 @@
             },
             "development": {
               "buildTarget": "dice:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        }
+      }
+    },
+    "leveler-advanced": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "inlineStyle": true
+        }
+      },
+      "root": "projects/leveler-advanced",
+      "sourceRoot": "projects/leveler-advanced/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/leveler-advanced/src/main.ts",
+            "tsConfig": "projects/leveler-advanced/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/leveler-advanced/public"
+              }
+            ],
+            "styles": [
+              "projects/leveler-advanced/src/styles.css"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "leveler-advanced:build:production"
+            },
+            "development": {
+              "buildTarget": "leveler-advanced:build:development"
             }
           },
           "defaultConfiguration": "development"
